@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational quotes</title>
+    <style>
+        body{
+            text-align: center;
+            background: radial-gradient(rgb(13, 132, 128), rgb(69, 161, 232), rgb(64, 237, 64));
+            color: #fff;
+            font-family: monospace;
+        }
+        img{
+            width: 400px; max-height: 550px;
+            border: 2px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <section class="intro">
+        <h3>Motivational quotes to gear you up in 2025</h3>
+        <div class="images">
+            <img src="life-quote1.jpg" alt="quotes" id="quotes">
+        </div>
+    </section>
+</body>
+<script>
+const quotes = document.getElementById("quotes");
+let num = 2
+const imgInterval = setInterval(() => {
+    quotes.src = `life-quote${num}.jpg`;
+    num++;
+    if (num > 85){
+        // clearInterval(imgInterval);
+        num = 1;
+    }
+}, 3500);
+</script>
+</html>
